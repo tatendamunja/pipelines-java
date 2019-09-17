@@ -22,10 +22,6 @@ steps:
     goals: 'package'
 
 # https://docs.microsoft.com/azure/devops/pipelines/ecosystems/python
-pool:
-  vmImage: 'ubuntu-16.04' # other options: 'macOS-10.13', 'vs2017-win2016'
-
-steps:
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '3.6'
