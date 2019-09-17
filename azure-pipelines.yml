@@ -27,6 +27,7 @@ strategy:
       jdk_version: "1.11"
   maxParallel: 2
   
+  
 steps:
 - task: Maven@3
   inputs:
