@@ -21,23 +21,11 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
 
-# https://aka.ms/yaml
-jobs:
-- job: 'Test'
-  pool:
-    vmImage: 'ubuntu-16.04' # other options: 'macOS-10.13', 'vs2017-win2016'
-  strategy:
-    matrix:
-      Python27:
-        python.version: '2.7'
-      Python35:
-        python.version: '3.5'
-      Python36:
-        python.version: '3.6'
+# https://docs.microsoft.com/azure/devops/pipelines/ecosystems/python
+pool:
+  vmImage: 'ubuntu-16.04' # other options: 'macOS-10.13', 'vs2017-win2016'
 
-  steps:
-  - task: UsePythonVersion@0
-    inputs:
-      versionSpec: '$(python.version)'
-
-  # Add additional tasks to run using each Python version in the matrix above
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.6'
