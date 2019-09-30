@@ -4,7 +4,6 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 
-name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
 steps:
 trigger:
 - master
@@ -17,6 +16,7 @@ strategy:
     jdk11:
       jdk_version: "1.11"
   maxParallel: 2
+  name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
   
 
 steps:
