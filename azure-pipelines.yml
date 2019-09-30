@@ -3,7 +3,6 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
-
 steps:
 trigger:
 - master
@@ -16,8 +15,6 @@ strategy:
     jdk11:
       jdk_version: "1.11"
   maxParallel: 2
-  name: $(TeamProject)_$(BuildDefinition)_$(SourceBranch)_$(Date:yyyyMMdd)$(Rev:.r)
-  
 
 steps:
 - task: Maven@3
