@@ -16,7 +16,7 @@ strategy:
     jdk11:
       jdk_version: "1.11"
   maxParallel: 2
-  name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+  name: $(TeamProject)_$(BuildDefinition)_$(SourceBranch)_$(Date:yyyyMMdd)$(Rev:.r)
   
 
 steps:
